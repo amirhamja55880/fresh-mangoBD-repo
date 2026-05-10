@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fresh Mango BD – Seasonal Mango Delivered</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <span class="logo-icon">🥭</span>
+      <span class="logo-text">Fresh<strong>Mango</strong>BD</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#order">Order Now</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="badge">🌿 100% Natural · Season 2025</span>
+      <h1>Fresh Seasonal<br><span class="highlight">Mango</span><br>Delivered To<br>Your Doorstep</h1>
+      <p>Sourced directly from the finest orchards of Rajshahi & Chapai Nawabganj. Taste the real sweetness of Bangladesh's best mangoes.</p>
+      <div class="hero-buttons">
+        <a href="#order" class="btn btn-primary">🛒 Order Now</a>
+        <a href="#products" class="btn btn-outline">View Products</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>500+</strong><span>Happy Customers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>4</strong><span>Mango Varieties</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>24h</strong><span>Fast Delivery</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mango-circle">
+        <div class="mango-emoji-big">🥭</div>
+        <div class="orbit orbit1"><span>🌿</span></div>
+        <div class="orbit orbit2"><span>⭐</span></div>
+        <div class="orbit orbit3"><span>🍃</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="products-section" id="products">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Collection</span>
+      <h2>Premium Mango Varieties</h2>
+      <p>Hand-picked, naturally ripened, and delivered fresh from garden to your table</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card" data-mango="Himsagar Mango">
+        <div class="card-badge">Best Seller</div>
+        <div class="card-emoji">🥭</div>
+        <div class="card-body">
+          <h3>Himsagar Mango</h3>
+          <p>The king of mangoes! Known for its exceptional sweetness, rich pulp, and unique aroma. Grown in Rajshahi.</p>
+          <div class="card-footer">
+            <div class="price-tag">
+              <span class="price">৳ 180</span>
+              <span class="per">/ KG</span>
+            </div>
+            <button class="btn-order" onclick="selectMango('Himsagar Mango')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-mango="Langra Mango">
+        <div class="card-badge popular">Popular</div>
+        <div class="card-emoji">🥭</div>
+        <div class="card-body">
+          <h3>Langra Mango</h3>
+          <p>Famous for its greenish skin and incredibly sweet, fiber-free flesh. A summer favorite across Bangladesh.</p>
+          <div class="card-footer">
+            <div class="price-tag">
+              <span class="price">৳ 160</span>
+              <span class="per">/ KG</span>
+            </div>
+            <button class="btn-order" onclick="selectMango('Langra Mango')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-mango="Amrapali Mango">
+        <div class="card-badge fresh">Fresh Pick</div>
+        <div class="card-emoji">🥭</div>
+        <div class="card-body">
+          <h3>Amrapali Mango</h3>
+          <p>A hybrid variety with vibrant red-orange color, firm texture, and a delightful sweet-tangy balance.</p>
+          <div class="card-footer">
+            <div class="price-tag">
+              <span class="price">৳ 150</span>
+              <span class="per">/ KG</span>
+            </div>
+            <button class="btn-order" onclick="selectMango('Amrapali Mango')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-mango="Fazli Mango">
+        <div class="card-badge giant">Giant Size</div>
+        <div class="card-emoji">🥭</div>
+        <div class="card-body">
+          <h3>Fazli Mango</h3>
+          <p>The largest mango variety — huge, juicy, and mildly sweet. Perfect for making juice, smoothies, and pickles.</p>
+          <div class="card-footer">
+            <div class="price-tag">
+              <span class="price">৳ 120</span>
+              <span class="per">/ KG</span>
+            </div>
+            <button class="btn-order" onclick="selectMango('Fazli Mango')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-section" id="why-us">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag">Our Promise</span>
+      <h2>Why Choose Fresh Mango BD?</h2>
+      <p>We guarantee quality at every step — from orchard to your door</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🌳</div>
+        <h3>Fresh from Garden</h3>
+        <p>Directly sourced from certified orchards in Rajshahi & Chapai Nawabganj. No middlemen, no compromise.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌞</div>
+        <h3>Natural Ripening</h3>
+        <p>Zero chemicals. Our mangoes ripen naturally under the sun, preserving all nutrients and natural sweetness.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Order today and receive within 24–48 hours. Carefully packed to prevent bruising during transport.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💵</div>
+        <h3>Cash on Delivery</h3>
+        <p>Pay when you receive. We also accept bKash & Nagad for your convenience. 100% secure transactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER FORM ===== -->
+<section class="order-section" id="order">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Place Your Order</span>
+      <h2>Order Fresh Mangoes</h2>
+      <p>Fill the form below and we'll contact you to confirm your order</p>
+    </div>
+    <div class="order-wrapper">
+      <div class="order-info">
+        <h3>Quick Order Info</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Minimum order: 2 KG</li>
+          <li><i class="fas fa-check-circle"></i> Free delivery over 5 KG</li>
+          <li><i class="fas fa-check-circle"></i> Delivery in 24–48 hours</li>
+          <li><i class="fas fa-check-circle"></i> Cash on delivery available</li>
+          <li><i class="fas fa-check-circle"></i> bKash & Nagad accepted</li>
+          <li><i class="fas fa-check-circle"></i> 100% freshness guarantee</li>
+        </ul>
+        <a href="https://wa.me/8801700000000?text=Hi! I want to order fresh mangoes from Fresh Mango BD." 
+           target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Order via WhatsApp
+        </a>
+      </div>
+
+      <form class="order-form" id="orderForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="customerName" placeholder="Your full name" required/>
+            <span class="error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" id="phone" placeholder="01XXXXXXXXX" required/>
+            <span class="error" id="phoneError"></span>
+          </div>
+          <div class="form-group full">
+            <label>Full Address *</label>
+            <input type="text" id="address" placeholder="House no, Road, Area, District" required/>
+            <span class="error" id="addressError"></span>
+          </div>
+          <div class="form-group">
+            <label>Mango Type *</label>
+            <select id="mangoType" required>
+              <option value="">Select mango variety</option>
+              <option value="Himsagar Mango">Himsagar Mango – ৳180/KG</option>
+              <option value="Langra Mango">Langra Mango – ৳160/KG</option>
+              <option value="Amrapali Mango">Amrapali Mango – ৳150/KG</option>
+              <option value="Fazli Mango">Fazli Mango – ৳120/KG</option>
+            </select>
+            <span class="error" id="mangoError"></span>
+          </div>
+          <div class="form-group">
+            <label>Quantity (KG) *</label>
+            <input type="number" id="quantity" placeholder="Min 2 KG" min="2" required/>
+            <span class="error" id="qtyError"></span>
+          </div>
+          <div class="form-group">
+            <label>Delivery Area *</label>
+            <select id="deliveryArea" required>
+              <option value="">Select area</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Chattogram">Chattogram</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Barisal">Barisal</option>
+              <option value="Rangpur">Rangpur</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Other">Other District</option>
+            </select>
+            <span class="error" id="areaError"></span>
+          </div>
+          <div class="form-group">
+            <label>Payment Method *</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="payment" value="Cash on Delivery" checked/> 💵 Cash on Delivery</label>
+              <label class="radio-label"><input type="radio" name="payment" value="bKash"/> 📱 bKash</label>
+              <label class="radio-label"><input type="radio" name="payment" value="Nagad"/> 💳 Nagad</label>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Special Note (Optional)</label>
+            <textarea id="note" rows="3" placeholder="Any special instructions or preferences..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+          <i class="fas fa-shopping-cart"></i> Place Order
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUCCESS MODAL ===== -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <div class="modal-icon">✅</div>
+    <h3>Order Placed Successfully!</h3>
+    <p>Thank you! We'll call you shortly to confirm your order. Your fresh mangoes are on their way! 🥭</p>
+    <button class="btn btn-primary" onclick="closeModal()">Great, Thanks!</button>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach us anytime via phone, WhatsApp, or Facebook</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h4>Call Us</h4>
+        <p>01700-000000</p>
+        <p>01800-000000</p>
+        <a href="tel:+8801700000000" class="contact-link">Call Now</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Message us anytime</p>
+        <p>Quick response guaranteed</p>
+        <a href="https://wa.me/8801700000000" target="_blank" class="contact-link whatsapp">WhatsApp Now</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📘</div>
+        <h4>Facebook Page</h4>
+        <p>Follow for updates</p>
+        <p>Daily fresh mango news</p>
+        <a href="https://facebook.com/freshmangobd" target="_blank" class="contact-link facebook">Visit Page</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h4>Business Address</h4>
+        <p>Khulna Sadar, Khulna</p>
+        <p>Bangladesh – 9100</p>
+        <a href="#" class="contact-link">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">🥭</span>
+          <span class="logo-text">Fresh<strong>Mango</strong>BD</span>
+        </div>
+        <p>Bringing the finest seasonal mangoes from the orchards of Bangladesh directly to your doorstep. Fresh. Natural. Delicious.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#order">Order Now</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Mango Varieties</h4>
+        <ul>
+          <li><a href="#products">Himsagar – ৳180/KG</a></li>
+          <li><a href="#products">Langra – ৳160/KG</a></li>
+          <li><a href="#products">Amrapali – ৳150/KG</a></li>
+          <li><a href="#products">Fazli – ৳120/KG</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact Info</h4>
+        <ul>
+          <li>📞 01700-000000</li>
+          <li>📧 freshmangobd@gmail.com</li>
+          <li>📍 Khulna, Bangladesh</li>
+          <li>🕐 Sat–Thu: 8am–8pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FreshMangoBD. All rights reserved. Made with 🥭 in Bangladesh.</p>
+      <a href="/admin/index.html" class="admin-link">Admin Panel</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
