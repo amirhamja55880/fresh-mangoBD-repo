@@ -1,0 +1,18 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "customer_name": "MD. ABDULLAH SHEK",
+      "phone": "01983890650",
+      "address": "Rayermabal School Road",
+      "mango_type": "Fazli Mango",
+      "quantity": 10,
+      "delivery_area": "Khulna",
+      "payment_method": "Cash on Delivery",
+      "note": "Fresh mango diban",
+      "order_status": "Pending",
+      "created_at": "5/10/2026, 4:05:44 PM"
+    }
+  ],
+  "nextId": 2
+}
