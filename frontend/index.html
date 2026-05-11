@@ -293,6 +293,7 @@
                 />
                 <span class="error" id="phoneError"></span>
               </div>
+
               <div class="form-group full">
                 <label>Full Address *</label>
                 <input
@@ -398,20 +399,95 @@
                 </div>
                 <span class="error" id="mangoError"></span>
               </div>
-              <div class="form-group">
+              <div class="form-group full">
                 <label>Delivery Area *</label>
-                <select id="deliveryArea" required>
-                  <option value="">Select area</option>
-                  <option value="Dhaka">Dhaka</option>
-                  <option value="Chattogram">Chattogram</option>
-                  <option value="Rajshahi">Rajshahi</option>
-                  <option value="Khulna">Khulna</option>
-                  <option value="Sylhet">Sylhet</option>
-                  <option value="Barisal">Barisal</option>
-                  <option value="Rangpur">Rangpur</option>
-                  <option value="Mymensingh">Mymensingh</option>
-                  <option value="Other">Other District</option>
-                </select>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 12px;
+                  "
+                >
+                  <div>
+                    <label
+                      style="
+                        font-size: 0.78rem;
+                        color: #6b7280;
+                        margin-bottom: 4px;
+                        display: block;
+                      "
+                      >বিভাগ</label
+                    >
+                    <select
+                      id="divisionSelect"
+                      onchange="loadDistricts()"
+                      style="
+                        width: 100%;
+                        padding: 12px 16px;
+                        border: 2px solid #ede9d8;
+                        border-radius: 8px;
+                        font-size: 0.92rem;
+                        outline: none;
+                        background: #fffbf0;
+                      "
+                    >
+                      <option value="">বিভাগ বাছুন</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      style="
+                        font-size: 0.78rem;
+                        color: #6b7280;
+                        margin-bottom: 4px;
+                        display: block;
+                      "
+                      >জেলা</label
+                    >
+                    <select
+                      id="districtSelect"
+                      onchange="loadUpazilas()"
+                      disabled
+                      style="
+                        width: 100%;
+                        padding: 12px 16px;
+                        border: 2px solid #ede9d8;
+                        border-radius: 8px;
+                        font-size: 0.92rem;
+                        outline: none;
+                        background: #fffbf0;
+                      "
+                    >
+                      <option value="">আগে বিভাগ বাছুন</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      style="
+                        font-size: 0.78rem;
+                        color: #6b7280;
+                        margin-bottom: 4px;
+                        display: block;
+                      "
+                      >উপজেলা</label
+                    >
+                    <select
+                      id="deliveryArea"
+                      disabled
+                      style="
+                        width: 100%;
+                        padding: 12px 16px;
+                        border: 2px solid #ede9d8;
+                        border-radius: 8px;
+                        font-size: 0.92rem;
+                        outline: none;
+                        background: #fffbf0;
+                      "
+                    >
+                      <option value="">আগে জেলা বাছুন</option>
+                    </select>
+                  </div>
+                </div>
                 <span class="error" id="areaError"></span>
               </div>
               <div class="form-group">
