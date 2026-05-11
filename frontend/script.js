@@ -2,7 +2,10 @@
 // FRESH MANGO BD — script.js
 // ============================
 
-const API_BASE = "https://fresh-mangobd-repo.onrender.com/api";
+const API_BASE =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/api"
+    : "https://fresh-mangobd-repo.onrender.com/api";
 
 // ===== NAVBAR =====
 const navbar = document.getElementById("navbar");
@@ -177,13 +180,8 @@ document.getElementById("orderForm").addEventListener("submit", async (e) => {
   submitBtn.innerHTML =
     '<i class="fas fa-spinner fa-spin"></i> অর্ডার হচ্ছে...';
 
-  try {
-    const response = await fetch(`${API_BASE}/orders`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(orderData),
-    });
-    if (!response.ok) throw new Error("Server error");
+  // Show success after 5 seconds
+  setTimeout(() => {
     document.getElementById("successModal").classList.add("active");
     document.getElementById("orderForm").reset();
     document.querySelectorAll(".mango-qty").forEach((q) => {
@@ -191,19 +189,16 @@ document.getElementById("orderForm").addEventListener("submit", async (e) => {
       q.value = "";
     });
     document.getElementById("orderTotal").style.display = "none";
-    calculateTotal();
-  } catch (err) {
-    document.getElementById("successModal").classList.add("active");
-    document.getElementById("orderForm").reset();
-    document.querySelectorAll(".mango-qty").forEach((q) => {
-      q.disabled = true;
-      q.value = "";
-    });
-    document.getElementById("orderTotal").style.display = "none";
-  } finally {
     submitBtn.disabled = false;
     submitBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Place Order';
-  }
+  }, 5000);
+
+  // Send to server in background
+  fetch(`${API_BASE}/orders`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(orderData),
+  }).catch(() => {});
 });
 
 // ===== CLOSE MODAL =====
